@@ -6,6 +6,7 @@ Future updates will include:
 - A graphical user interface (GUI)  
 - Terminal-based features  
 - Greater user control over components and environment
+  
 ## Installation
 Clone the repository using git (.clone)
 ```bash
