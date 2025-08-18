@@ -24,3 +24,6 @@ cd ./WeatherApp
         _object.activate()
         _object.output_friendly()
   ```
+## To set an API
+  Open "./core/configuration/config.json" with any text editor and replace the API key with yours, of course the API service
+  may differ also other settings inside the 'config.json' file.
