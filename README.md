@@ -24,6 +24,17 @@ cd ./WeatherApp
         _object.activate()
         _object.output_friendly()
   ```
+## Example output:
+  ```markup
+  * City: Shumen;
+  * Region: Shumen;
+  * Country: Bulgaria;
+  * Latitude: 43.2767;
+  * Longitude: 26.9292;
+  * Temperature: 22.1;
+  * Humidity: 69;
+  * Wind: 6.1;
+```
 ## To set an API key
   Open "./core/configuration/config.json" with any text editor and replace the API key with yours, of course the API service
   may differ also other settings inside the 'config.json' file.
