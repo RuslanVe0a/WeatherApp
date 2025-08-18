@@ -1,0 +1,13 @@
+{
+  "API_KEY" : "91a1d4d3ebb4471d8c7165036251808",
+  "API_SERVICE" : "api.weatherapi.com",
+  "SPATH": "v1/current.xml",
+  "type": "xml",
+  "meta": {
+    "meta-1": "A free and reliable weather service."
+  },
+  "arguments": {
+    "essential": [["key", "key"], ["q", "target"]]
+  },
+  "_final_type" : "json"
+}
