@@ -25,7 +25,7 @@ cd ./WeatherApp
         _object.output_friendly()
   ```
 ## Example output:
-  ```json
+  ```
   * City: Shumen;
   * Region: Shumen;
   * Country: Bulgaria;
