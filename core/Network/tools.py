@@ -13,10 +13,10 @@ def recv_time(function):
         copied: dict = kwargs["recv_time_config"]
         del kwargs["recv_time_config"]
         threading.Thread(target=function, args=args, kwargs=kwargs).start()
-        while not copied["_attr"].finished:
-            if copied["_attr"].time >= 3: setattr(copied["_attr"], "finished", True)
+        while not copied["_attr"].time >= 3:
+            if copied["_attr"].finished: return
             copied["_attr"].time += 1
             time.sleep(1)
-        return copied["_attr"].data
+        setattr(copied["_attr"], "finished", True)
 
     return wrapper
