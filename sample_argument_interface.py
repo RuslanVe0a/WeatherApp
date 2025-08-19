@@ -23,7 +23,7 @@ def inspect(_argument: Namespace):
         if api: core.initializator.API_KEY = api
         if service: core.initializator.API_SERVICE = service
         if configpath: core.initializator.init(configpath)
-        if servicepath: core.initializator.CONFIG_DICT["SPATH"] = servicepath
+        if servicetype: core.initializator.CONFIG_DICT["SPATH"] = servicepath
         if finaltype: core.initializator.CONFIG_DICT["_final_type"] = finaltype
         if _mapping: core.initializator.CONFIG_DICT["mapping"] = _mapping
     _weatherMain.set_target(("_", _target) if "," not in _target else _target.split(","))
