@@ -12,6 +12,7 @@ Clone the repository using git (.clone)
 ```bash
 git clone https://github.com/RuslanVe0a/WeatherApp.git
 cd ./WeatherApp
+pip install -r requirements.txt | python -m pip install -r requirements.txt
 ```
 
 
