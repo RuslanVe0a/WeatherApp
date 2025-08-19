@@ -20,6 +20,10 @@ class _abstract_sock(object):
 
 class get(_abstract_sock):
 
+    _status_codes: dict = {
+        "200": "Found",
+        "404": "Not Found"
+    }
 
     def __init__(self, url: str = "", _class_object = None, _ssl: bool = False) -> None:
         self.url: str = url
@@ -42,7 +46,11 @@ Host: {core.initializator.API_SERVICE}\r\x0AConnection: Keep-Alive\r\x0AUser-Age
         self.socket.send(_http_header.encode("utf-8", errors="ignore"))
 
     def receive(self):
-        _data: bytes = self.socket.recv(1024, recv_time_config = {"_attr" : self.socket})
+        self.socket.recv(buffer = 1024, recv_time_config = {"_attr" : self.socket})
+        status_code: str = (self.socket.data.split(b"\r\x0A")[0].split(b" ")[1]).strip().decode("utf-8", errors="ignore")
+        if status_code not in self._status_codes or self._status_codes[status_code] != "Found":
+            raise core.utils.exceptions.HttpError(f"Unable to retrieve information. Status code: {status_code}.")
+        tools._log(f"Got status code: {status_code}.")
 
     def set_type(self, type: str):
         self.type = type

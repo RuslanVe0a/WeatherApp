@@ -29,15 +29,9 @@ class wrapped(object):
 
     @tools.recv_time
     def recv(self, buffer: int):
-        header: bool = False
+        # header: bool = False
         while not self.finished:
             retrieved = self.socket.recv(buffer)
-            if not header:
-                status_code: str = (retrieved.split(b"\r\x0A")[0].split(b" ")[1]).strip().decode("utf-8", errors="ignore")
-                if status_code != "200":
-                    raise core.utils.exceptions.HttpError(f"Unable to retrieve information. Status code: {status_code}.")
-                utils._log(f"Got status code: {status_code}.")
-                header = True
             if not retrieved: self.finished = True
             self.data += retrieved
         utils._log(f"received: {len(self.data)} bytes. Acquired for {self.time}s.")

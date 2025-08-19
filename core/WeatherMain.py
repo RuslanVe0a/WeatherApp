@@ -2,6 +2,7 @@ import core.utils.tools as tools
 import core.utils.exceptions
 import core.initializator
 import core.Network.requests as requests
+import os
 
 core.initializator.init() # an initializator for the main components.
 
@@ -23,7 +24,7 @@ class Main(object):
         self.flags: list = [] # works for filters as well.
         self.settings: dict = {
             "config_file": core.initializator.CONFIG_DICT,
-            "API_KEY": core.initializator.API_KEY,
+            "API_KEY": os.getenv("API_KEY"),
             "API_SERVICE": core.initializator.API_SERVICE,
         }
 
@@ -43,7 +44,7 @@ class Main(object):
     def activate(self):
         tools._log("Activating WeatherMain.")
         _request: object = requests.get(_class_object=self)
-        _request.set_header(_construct(core.initializator.CONFIG_DICT["arguments"]["essential"], self.target[1], core.initializator.API_KEY))
+        _request.set_header(_construct(core.initializator.CONFIG_DICT["arguments"]["essential"], self.target[1], self.settings["API_KEY"]))
         _request.send()
         _request.set_type(core.initializator.CONFIG_DICT["type"])
         _request.receive()
