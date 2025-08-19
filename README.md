@@ -13,6 +13,8 @@ Clone the repository using git (.clone)
 git clone https://github.com/RuslanVe0a/WeatherApp.git
 cd ./WeatherApp
 ```
+<img width="591" height="533" alt="image" src="https://github.com/user-attachments/assets/37b01fe5-0cb3-464b-99cf-ecead875d0b2" />
+
 
 ## Example usage:
   ```python
