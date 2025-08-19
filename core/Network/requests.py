@@ -48,6 +48,7 @@ Host: {core.initializator.API_SERVICE}\r\x0AConnection: Keep-Alive\r\x0AUser-Age
         self.type = type
 
     def as_json(self):
+        tools._log("Unpacking payload information...")
         _payload: str = self.socket.data.split(b"\r\x0A\r\x0A")[1].decode("utf-8", errors="ignore")
         if self.type == "xml":
             _root = ET.fromstring(_payload)

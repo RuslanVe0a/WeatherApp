@@ -21,7 +21,7 @@ class Terminal(object):
         """
         self.parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode", default=False, dest="verbose")
         self.parser.add_argument("-t", "--test", action="store_true", help="Run tests", default=False, dest="test")
-        self.parser.add_argument("-q", "--query", action="store", help="Provide a target query (i.e Shumen)", default=None, dest="target", required=False)
+        self.parser.add_argument("-q", "--query", action="store", help="Provide a target query (i.e Shumen)", default=None, dest="target", required=True)
         _startparser = self.parser.add_subparsers(title = "Features", dest = "features", help = "Features commands")
         helper.add_subparsers(_startparser)
 
