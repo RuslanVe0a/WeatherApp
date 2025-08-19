@@ -24,6 +24,10 @@ cd ./WeatherApp
         _object.activate()
         _object.output_friendly()
   ```
+## Example usage using arguments:
+  ```bash
+  python sample_argument_interface.py -v -q=Shumen | python sample_argument_interface -q=Shumen
+  ```
 ## Example output:
   ```
   * City: Shumen;
