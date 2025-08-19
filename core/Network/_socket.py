@@ -10,8 +10,8 @@ class wrapped(object):
     def __init__(self, __socket, _ssl: bool):
         self.socket = __socket
         self._ssl = _ssl
-        self.finished: bool = False
         self.time: int = 0
+        self.finished: bool = False
         self.data: bytes = b""
 
     def __repr__(self):
