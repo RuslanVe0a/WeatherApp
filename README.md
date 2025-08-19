@@ -32,6 +32,8 @@ cd ./WeatherApp
   ```bash
   python sample_argument_interface.py -v -q=Shumen | python sample_argument_interface -q=Shumen
   ```
+<img width="987" height="549" alt="image" src="https://github.com/user-attachments/assets/078f6080-7c3f-4326-9ea6-f16b86a3a6ac" />
+
 ## Example output:
   ```
   * City: Shumen;
