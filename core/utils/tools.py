@@ -1,18 +1,18 @@
 import colorama
-
+import core.constants
 
 
 colorama.just_fix_windows_console()
 
-def _log(*text, color: str = colorama.Fore.WHITE, head: str = "[LOG]: ") -> None:
+def log(*text, color: str = colorama.Fore.WHITE, head: str = f"{core.constants.LOG_PREFIXES}: ") -> None:
     print(head, color, *text, colorama.Style.RESET_ALL, "\n")
     return
 
-def _warning(*text, color: str = colorama.Fore.YELLOW, head: str = "[WARNING]: ") -> None:
-    _log(text, color, head)
+def warning(*text, color: str = colorama.Fore.YELLOW, head: str = f"{core.constants.WARNING_PREFIXES}: ") -> None:
+    log(text, color, head)
 
-def _error(*text, color: str = colorama.Fore.RED, head: str = "[ERROR]: ") -> None:
-    _log(text, color, head)
+def _error(*text, color: str = colorama.Fore.RED, head: str = f"{core.constants.ERROR_PREFIXES}: ") -> None:
+    log(text, color, head)
 
 
 

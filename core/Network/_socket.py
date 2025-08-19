@@ -4,7 +4,7 @@ import core.Network.tools as tools
 import core.utils.tools as utils
 import core.utils.exceptions
 
-class wrapped(object):
+class Wrapped(object):
 
 
     def __init__(self, __socket, _ssl: bool):
@@ -15,7 +15,7 @@ class wrapped(object):
         self.data: bytes = b""
 
     def __repr__(self):
-        return f"<wrapped socket={self.socket}>"
+        return f"<Wrapped socket={self.socket}>"
 
 
     def connect(self, target: str, port: int):
@@ -34,12 +34,12 @@ class wrapped(object):
             retrieved = self.socket.recv(buffer)
             if not retrieved: self.finished = True
             self.data += retrieved
-        utils._log(f"received: {len(self.data)} bytes. Acquired for {self.time}s.")
+        utils.log(f"received: {len(self.data)} bytes. Acquired for {self.time}s.")
 
 
-def create_socket(_ssl: bool = False) -> wrapped:
+def create_socket(_ssl: bool = False) -> Wrapped:
     _object: object = socket(AF_INET, SOCK_STREAM)
-    return wrapped(_object, _ssl)
+    return Wrapped(_object, _ssl)
 
 
 

@@ -1,6 +1,6 @@
 import json
 import os
-from core.utils.tools import _log as _log_output, read_file
+from core.utils.tools import log as _log_output, read_file
 
 API_SERVICE: str = ""
 CONFIG_DICT: dict = {}
