@@ -32,7 +32,8 @@ cd ./WeatherApp
   ```bash
   python sample_argument_interface.py -v -q=Shumen | python sample_argument_interface -q=Shumen
   ```
-<img width="987" height="549" alt="image" src="https://github.com/user-attachments/assets/078f6080-7c3f-4326-9ea6-f16b86a3a6ac" />
+<img width="985" height="538" alt="image" src="https://github.com/user-attachments/assets/59d859db-dd96-4560-b187-914d0e4e95e5" />
+
 
 ## Example output:
   ```
