@@ -12,7 +12,7 @@ class Terminal(object):
     def __repr__(self):
         return "Terminal"
 
-    def load_base(self) -> None:
+    def load_base(self):
         """
         The purpose of this method is to create all the essential components of the terminal.
         The user is required to provide a query. It may be also required to configure the configuration module,

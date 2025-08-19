@@ -7,7 +7,7 @@ CONFIG_DICT: dict = {}
 VERBOSITY: bool = False
 
 @read_file
-def load_config_file(contents: str) -> None:
+def load_config_file(contents: str):
     """
     The purpose of this method is to load the config file, located in "./core/configuration/config.json.
     This file is extremely recommended as it is a core component.

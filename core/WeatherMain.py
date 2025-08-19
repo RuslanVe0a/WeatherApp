@@ -17,7 +17,7 @@ def _construct(dictionary: dict, target: str, api_key: str) -> str:
 class Main(object):
 
 
-    def __init__(self) -> None:
+    def __init__(self):
         logging("Initializing WeatherMain.")
         self.target: str = ""
         self.results: dict = {}
@@ -28,13 +28,13 @@ class Main(object):
             "API_SERVICE": core.initializator.API_SERVICE,
         }
 
-    def set_target(self, target: tuple[str, str]) -> None:
+    def set_target(self, target: tuple[str, str]):
         if len(target) != 2 or not target[0] or not target[1]:
             raise core.utils.exceptions.InvalidTarget("Invalid target.")
         self.target = target
         logging(f"Target set -> {", ".join(target)}.")
 
-    def set_filters(self, filters: dict) -> None:
+    def set_filters(self, filters: dict):
         if not filters:
             warning("Given filters are empty. No need to add them."); return
         if not isinstance(filters, dict):
