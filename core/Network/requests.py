@@ -54,13 +54,13 @@ Host: {core.initializator.API_SERVICE}\r\x0AConnection: Keep-Alive\r\x0AUser-Age
             location = _root.find(".//location")
             current = _root.find(".//current")
             _targets: dict = {}
-            for v, k, f in [("City", "name", "location"), ("Region", "region", "location"),
-            ("Country", "country", "location"), ("Latitude", "lat", "location"), ("Longitude", "lon", "location"),
-            ("Temperature", "temp_c", "current"), ("Humidity", "humidity", "current"), ("Wind", "wind_kph", "current")]:
+            for v, k, f in core.initializator.CONFIG_DICT["mapping"]:
                 child = location.find(".//" + k) if f == "location" else current.find(".//" + k)
                 _targets[v] = child.text if child is not None else None
             tools._log("Finished.")
             return _targets
+        elif self.type == "json":
+            return json.loads(_payload)
 
     def __del__(self):
         pass

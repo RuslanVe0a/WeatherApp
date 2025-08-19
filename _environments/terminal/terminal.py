@@ -28,7 +28,8 @@ class Terminal(object):
     def finish(self):
         return self.parser.parse_args()
 
-def Main():
+def Main() -> argparse.Namespace:
     _terminal: object = Terminal()
     _terminal.load_base()
     _args: argparse.Namespace = _terminal.finish()
+    return _args

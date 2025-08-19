@@ -9,5 +9,8 @@
   "arguments": {
     "essential": [["key", "key"], ["q", "target"]]
   },
-  "_final_type" : "json"
+  "_final_type" : "json",
+  "mapping" : [["City", "name", "location"], ["Region", "region", "location"],
+            ["Country", "country", "location"], ["Latitude", "lat", "location"], ["Longitude", "lon", "location"],
+            ["Temperature", "temp_c", "current"], ["Humidity", "humidity", "current"], ["Wind", "wind_kph", "current"]]
 }
