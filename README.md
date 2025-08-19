@@ -25,6 +25,7 @@ cd ./WeatherApp
         _object.activate()
         _object.output_friendly()
   ```
+
 <img width="591" height="533" alt="image" src="https://github.com/user-attachments/assets/37b01fe5-0cb3-464b-99cf-ecead875d0b2" />
 
 ## Example usage using arguments:
